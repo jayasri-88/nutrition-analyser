@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# environment variables
+.env
+.env.local
+.env.*.local
+
+# build outputs
+dist/
+build/
+
+# Python ML api cache
+__pycache__/
+*.pyc
+
+# VSCode settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

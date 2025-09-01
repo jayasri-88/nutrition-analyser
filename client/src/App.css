@@ -1,0 +1,253 @@
+/* Base Reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #e8f5e9); /* soft blue-green gradient */
+  color: #333;
+  min-height: 100vh;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #2196f3;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+  border: 1px solid #e0e0e0;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Upload Section */
+.upload-section {
+  margin-bottom: 2rem;
+}
+
+.upload-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #6a1b9a;
+  text-align: center;
+  font-weight: bold;
+}
+
+.upload-box {
+  border: 2px dashed #8e44ad;
+  border-radius: 16px;
+  padding: 2rem;
+  background-color: #f3e5f5;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-box:hover {
+  background-color: #e1bee7;
+}
+
+.upload-box input[type="file"] {
+  display: none;
+}
+
+.upload-icon {
+  font-size: 2.5rem;
+  color: #8e44ad;
+  margin-bottom: 0.5rem;
+}
+
+.upload-text {
+  font-size: 1rem;
+  color: #5e35b1;
+  font-weight: 500;
+}
+
+/* Gender Section */
+.gender-section {
+  margin-bottom: 1.5rem;
+}
+
+.gender-section h2 {
+  font-size: 1.2rem;
+  color: #00796b;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.gender-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gender-options label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Age Section */
+.age-section {
+  margin-bottom: 1.5rem;
+}
+
+.age-section h2 {
+  font-size: 1.2rem;
+  color: #00796b;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.age-section input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Analyze Button */
+.submit-button {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.submit-button button {
+  padding: 0.8rem 2rem;
+  background: linear-gradient(to right, #43cea2, #185a9d); /* green-blue gradient */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-button button:hover {
+  background: linear-gradient(to right, #185a9d, #43cea2);
+}
+
+/* Results */
+.results-section {
+  border-top: 3px solid #fdd835;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  max-width: 100%;
+  word-break: break-word;
+  background: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.results-section pre {
+  background: #eceff1;
+  color: #263238;
+  padding: 1rem;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 1rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.results-section h3 {
+  margin-top: 1.2rem;
+  color: #1976d2;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.results-section p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0.3rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #000000;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 98vw;
+  }
+  .results-section {
+    min-height: 120px;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gender-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .submit-button button {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+}
