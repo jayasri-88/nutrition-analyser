@@ -32,11 +32,14 @@ router.post('/', upload.single('file'), async (req, res) => {
 
     // Step 3: Send to ML server
     console.log('📡 Sending request to ML server...');
-    const mlresponse = await axios.post('http://localhost:8000/analyze', {
-      text: extractedText,
-      age,
-      gender
-    });
+    const mlresponse = await axios.post(
+`${process.env.ML_API_URL}/analyze`,
+{
+ text: extractedText,
+ age,
+ gender
+}
+);
     console.log('✅ ML response received:', mlresponse.data);
 
     // Step 4: Return success response
